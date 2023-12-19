@@ -1,0 +1,2409 @@
+{
+  "contractName": "Autodealer",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "AutodealerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "AutodealerRemoved",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "isAutodealer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "addAutodealer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "removeAutodealer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"AutodealerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"AutodealerRemoved\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"addAutodealer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"isAutodealer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"removeAutodealer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isAutodealer(address)\":{\"details\":\"Autodealer Utility functions.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/rolesUtils[deprecated]/Autodealer.sol\":\"Autodealer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/rolesUtils[deprecated]/Autodealer.sol\":{\"keccak256\":\"0xa58fdd0d5b89f298c3964c2051f651a59c500f5a6795aaecb12c7c83107ac804\",\"urls\":[\"bzz-raw://f6da3324f05fe485a16f19993e736291d46e0b23374230fa21c3e2a082eb1e56\",\"dweb:/ipfs/QmStPaehoXUf8dPbdPzEvY7HQ3wrST7woxKMHUbAGRko1a\"]},\"project:/contracts/rolesUtils[deprecated]/Roles.sol\":{\"keccak256\":\"0x0a7e1412487cf8072c2157904cc7820f14728dcb597c38756bab4a68dfa582a7\",\"urls\":[\"bzz-raw://3529dc207c096b92ca59f0517598b05386d0bfaea8b5ea0184a9f6f5c5a0cd06\",\"dweb:/ipfs/QmaatBa3Fwoy2eRpaszgoqfiBvnhLw4Hr3BeugHJHUUyZD\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061002933600061005960201b6101601790919060201c565b60405133907f6940de46a2427e6a166fa9620b8e212e336140808685568ebdaeb13650421c8f90600090a26100e3565b6001600160a01b03811661006c57600080fd5b61007f82826001600160e01b036100ae16565b1561008957600080fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b60006001600160a01b0382166100c357600080fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b61025e806100f26000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806317e70f801461004657806376134d201461006e5780639fedf737146100a8575b600080fd5b61006c6004803603602081101561005c57600080fd5b50356001600160a01b03166100b0565b005b6100946004803603602081101561008457600080fd5b50356001600160a01b031661010a565b604080519115158252519081900360200190f35b61006c610122565b6100b93361010a565b6100c257600080fd5b6100d360008263ffffffff61016016565b6040516001600160a01b038216907f6940de46a2427e6a166fa9620b8e212e336140808685568ebdaeb13650421c8f90600090a250565b600061011c818363ffffffff6101ac16565b92915050565b61013360003363ffffffff6101e116565b60405133907f64924536eee2039e675c9f2481424cc2623b173360eafb645d173a941dffab9a90600090a2565b6001600160a01b03811661017357600080fd5b61017d82826101ac565b1561018757600080fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b60006001600160a01b0382166101c157600080fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b6001600160a01b0381166101f457600080fd5b6101fe82826101ac565b61020757600080fd5b6001600160a01b0316600090815260209190915260409020805460ff1916905556fea265627a7a723158207e1bf29ea2ee735a2d63385dd2aeb75471fd6f55fa4bb9ff548177fe5e45579164736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806317e70f801461004657806376134d201461006e5780639fedf737146100a8575b600080fd5b61006c6004803603602081101561005c57600080fd5b50356001600160a01b03166100b0565b005b6100946004803603602081101561008457600080fd5b50356001600160a01b031661010a565b604080519115158252519081900360200190f35b61006c610122565b6100b93361010a565b6100c257600080fd5b6100d360008263ffffffff61016016565b6040516001600160a01b038216907f6940de46a2427e6a166fa9620b8e212e336140808685568ebdaeb13650421c8f90600090a250565b600061011c818363ffffffff6101ac16565b92915050565b61013360003363ffffffff6101e116565b60405133907f64924536eee2039e675c9f2481424cc2623b173360eafb645d173a941dffab9a90600090a2565b6001600160a01b03811661017357600080fd5b61017d82826101ac565b1561018757600080fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b60006001600160a01b0382166101c157600080fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b6001600160a01b0381166101f457600080fd5b6101fe82826101ac565b61020757600080fd5b6001600160a01b0316600090815260209190915260409020805460ff1916905556fea265627a7a723158207e1bf29ea2ee735a2d63385dd2aeb75471fd6f55fa4bb9ff548177fe5e45579164736f6c63430005100032",
+  "sourceMap": "89:933:3:-;;;288:105;8:9:-1;5:2;;;30:1;27;20:12;5:2;288:105:3;315:35;339:10;315:15;:23;;;;;;:35;;;;:::i;:::-;361:27;;377:10;;361:27;;;;;89:933;;679:185:7;-1:-1:-1;;;;;764:22:7;;756:31;;;;;;802:23;810:4;816:8;-1:-1:-1;;;;;802:7:7;:23;:::i;:::-;801:24;793:33;;;;;;-1:-1:-1;;;;;833:19:7;:9;:19;;;;;;;;;;;:26;;-1:-1:-1;;833:26:7;855:4;833:26;;;679:185::o;449:171::-;538:4;-1:-1:-1;;;;;560:22:7;;552:31;;;;;;-1:-1:-1;;;;;;596:19:7;:9;:19;;;;;;;;;;;;;;;449:171::o;89:933:3:-;;;;;;;",
+  "deployedSourceMap": "89:933:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;89:933:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;712:143;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;712:143:3;-1:-1:-1;;;;;712:143:3;;:::i;:::-;;590:118;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;590:118:3;-1:-1:-1;;;;;590:118:3;;:::i;:::-;;;;;;;;;;;;;;;;;;859:124;;;:::i;712:143::-;473:24;486:10;473:12;:24::i;:::-;465:33;;;;;;781;:15;805:8;781:33;:23;:33;:::i;:::-;825:25;;-1:-1:-1;;;;;825:25:3;;;;;;;;712:143;:::o;590:118::-;651:4;670:33;651:4;694:8;670:33;:23;:33;:::i;:::-;663:40;590:118;-1:-1:-1;;590:118:3:o;859:124::-;900:38;:15;927:10;900:38;:26;:38;:::i;:::-;949:29;;967:10;;949:29;;;;;859:124::o;679:185:7:-;-1:-1:-1;;;;;764:22:7;;756:31;;;;;;802:23;810:4;816:8;802:7;:23::i;:::-;801:24;793:33;;;;;;-1:-1:-1;;;;;833:19:7;:9;:19;;;;;;;;;;;:26;;-1:-1:-1;;833:26:7;855:4;833:26;;;679:185::o;449:171::-;538:4;-1:-1:-1;;;;;560:22:7;;552:31;;;;;;-1:-1:-1;;;;;;596:19:7;:9;:19;;;;;;;;;;;;;;;449:171::o;928:188::-;-1:-1:-1;;;;;1016:22:7;;1008:31;;;;;;1053:23;1061:4;1067:8;1053:7;:23::i;:::-;1045:32;;;;;;-1:-1:-1;;;;;1084:19:7;1106:5;1084:19;;;;;;;;;;;:27;;-1:-1:-1;;1084:27:7;;;928:188::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <0.9.0;\n\nimport \"./Roles.sol\";\n\ncontract Autodealer {\n  using Roles for Roles.Role;\n\n  event AutodealerAdded(address indexed _account);\n  event AutodealerRemoved(address indexed _account);\n\n  Roles.Role private autodealersList;\n\n  constructor() public {\n    autodealersList.addRole(msg.sender);\n    emit AutodealerAdded(msg.sender);\n  }\n\n  ///@dev Modifiers for Autodealer.\n  modifier onlyAutodealer() {\n    require(isAutodealer(msg.sender));\n    _;\n  }\n  /*-----------------------------*/\n\n  ///@dev Autodealer Utility functions.\n  function isAutodealer(address _account) public view returns (bool) {\n    return autodealersList.hasRole(_account);\n  }\n\n  function addAutodealer(address _account) public onlyAutodealer {\n    autodealersList.addRole(_account);\n    emit AutodealerAdded(_account);\n  }\n\n  function removeAutodealer() public {\n    autodealersList.removeRole(msg.sender);\n    emit AutodealerRemoved(msg.sender);\n  }\n  /*-----------------------------*/\n\n}\n",
+  "sourcePath": "C:\\Users\\LEGION\\Desktop\\Desktop\\Final\\contracts\\rolesUtils[deprecated]\\Autodealer.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/rolesUtils[deprecated]/Autodealer.sol",
+    "exportedSymbols": {
+      "Autodealer": [
+        1770
+      ]
+    },
+    "id": 1771,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1681,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:3"
+      },
+      {
+        "absolutePath": "project:/contracts/rolesUtils[deprecated]/Roles.sol",
+        "file": "./Roles.sol",
+        "id": 1682,
+        "nodeType": "ImportDirective",
+        "scope": 1771,
+        "sourceUnit": 2136,
+        "src": "66:21:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1770,
+        "linearizedBaseContracts": [
+          1770
+        ],
+        "name": "Autodealer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 1685,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1683,
+              "name": "Roles",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2135,
+              "src": "119:5:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Roles_$2135",
+                "typeString": "library Roles"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "113:27:3",
+            "typeName": {
+              "contractScope": null,
+              "id": 1684,
+              "name": "Roles.Role",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2048,
+              "src": "129:10:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Role_$2048_storage_ptr",
+                "typeString": "struct Roles.Role"
+              }
+            }
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1689,
+            "name": "AutodealerAdded",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1688,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1687,
+                  "indexed": true,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1689,
+                  "src": "166:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1686,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "166:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "165:26:3"
+            },
+            "src": "144:48:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1693,
+            "name": "AutodealerRemoved",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1692,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1691,
+                  "indexed": true,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1693,
+                  "src": "219:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1690,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "219:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "218:26:3"
+            },
+            "src": "195:50:3"
+          },
+          {
+            "constant": false,
+            "id": 1695,
+            "name": "autodealersList",
+            "nodeType": "VariableDeclaration",
+            "scope": 1770,
+            "src": "249:34:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Role_$2048_storage",
+              "typeString": "struct Roles.Role"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1694,
+              "name": "Roles.Role",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2048,
+              "src": "249:10:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Role_$2048_storage_ptr",
+                "typeString": "struct Roles.Role"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 1710,
+              "nodeType": "Block",
+              "src": "309:84:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1701,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2150,
+                          "src": "339:3:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 1702,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "339:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1698,
+                        "name": "autodealersList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1695,
+                        "src": "315:15:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$2048_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 1700,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "addRole",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2103,
+                      "src": "315:23:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2048_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2048_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address)"
+                      }
+                    },
+                    "id": 1703,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "315:35:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1704,
+                  "nodeType": "ExpressionStatement",
+                  "src": "315:35:3"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1706,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2150,
+                          "src": "377:3:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 1707,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "377:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 1705,
+                      "name": "AutodealerAdded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1689,
+                      "src": "361:15:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 1708,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "361:27:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1709,
+                  "nodeType": "EmitStatement",
+                  "src": "356:32:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1711,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1696,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "299:2:3"
+            },
+            "returnParameters": {
+              "id": 1697,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "309:0:3"
+            },
+            "scope": 1770,
+            "src": "288:105:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1721,
+              "nodeType": "Block",
+              "src": "459:51:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 1715,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2150,
+                              "src": "486:3:3",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 1716,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "486:10:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          ],
+                          "id": 1714,
+                          "name": "isAutodealer",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1735,
+                          "src": "473:12:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view returns (bool)"
+                          }
+                        },
+                        "id": 1717,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "473:24:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 1713,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2153,
+                        2154
+                      ],
+                      "referencedDeclaration": 2153,
+                      "src": "465:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 1718,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "465:33:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1719,
+                  "nodeType": "ExpressionStatement",
+                  "src": "465:33:3"
+                },
+                {
+                  "id": 1720,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "504:1:3"
+                }
+              ]
+            },
+            "documentation": "@dev Modifiers for Autodealer.",
+            "id": 1722,
+            "name": "onlyAutodealer",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 1712,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "456:2:3"
+            },
+            "src": "433:77:3",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1734,
+              "nodeType": "Block",
+              "src": "657:51:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1731,
+                        "name": "_account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1724,
+                        "src": "694:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1729,
+                        "name": "autodealersList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1695,
+                        "src": "670:15:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$2048_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 1730,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "hasRole",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2071,
+                      "src": "670:23:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Role_$2048_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_Role_$2048_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address) view returns (bool)"
+                      }
+                    },
+                    "id": 1732,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "670:33:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1728,
+                  "id": 1733,
+                  "nodeType": "Return",
+                  "src": "663:40:3"
+                }
+              ]
+            },
+            "documentation": "@dev Autodealer Utility functions.",
+            "id": 1735,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAutodealer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1725,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1724,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1735,
+                  "src": "612:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1723,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "612:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "611:18:3"
+            },
+            "returnParameters": {
+              "id": 1728,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1727,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1735,
+                  "src": "651:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1726,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "651:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "650:6:3"
+            },
+            "scope": 1770,
+            "src": "590:118:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1752,
+              "nodeType": "Block",
+              "src": "775:80:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1745,
+                        "name": "_account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1737,
+                        "src": "805:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1742,
+                        "name": "autodealersList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1695,
+                        "src": "781:15:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$2048_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 1744,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "addRole",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2103,
+                      "src": "781:23:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2048_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2048_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address)"
+                      }
+                    },
+                    "id": 1746,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "781:33:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1747,
+                  "nodeType": "ExpressionStatement",
+                  "src": "781:33:3"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1749,
+                        "name": "_account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1737,
+                        "src": "841:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1748,
+                      "name": "AutodealerAdded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1689,
+                      "src": "825:15:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 1750,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "825:25:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1751,
+                  "nodeType": "EmitStatement",
+                  "src": "820:30:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1753,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1740,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1739,
+                  "name": "onlyAutodealer",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1722,
+                  "src": "760:14:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "760:14:3"
+              }
+            ],
+            "name": "addAutodealer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1738,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1737,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1753,
+                  "src": "735:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1736,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "735:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "734:18:3"
+            },
+            "returnParameters": {
+              "id": 1741,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "775:0:3"
+            },
+            "scope": 1770,
+            "src": "712:143:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1768,
+              "nodeType": "Block",
+              "src": "894:89:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1759,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2150,
+                          "src": "927:3:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 1760,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "927:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1756,
+                        "name": "autodealersList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1695,
+                        "src": "900:15:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$2048_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 1758,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "removeRole",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2134,
+                      "src": "900:26:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2048_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2048_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address)"
+                      }
+                    },
+                    "id": 1761,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "900:38:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1762,
+                  "nodeType": "ExpressionStatement",
+                  "src": "900:38:3"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1764,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2150,
+                          "src": "967:3:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 1765,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "967:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 1763,
+                      "name": "AutodealerRemoved",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1693,
+                      "src": "949:17:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 1766,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "949:29:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1767,
+                  "nodeType": "EmitStatement",
+                  "src": "944:34:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1769,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeAutodealer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1754,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "884:2:3"
+            },
+            "returnParameters": {
+              "id": 1755,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "894:0:3"
+            },
+            "scope": 1770,
+            "src": "859:124:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1771,
+        "src": "89:933:3"
+      }
+    ],
+    "src": "32:991:3"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/rolesUtils[deprecated]/Autodealer.sol",
+      "exportedSymbols": {
+        "Autodealer": [
+          1770
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".21",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 1681,
+        "name": "PragmaDirective",
+        "src": "32:32:3"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 2136,
+          "absolutePath": "project:/contracts/rolesUtils[deprecated]/Roles.sol",
+          "file": "./Roles.sol",
+          "scope": 1771,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1682,
+        "name": "ImportDirective",
+        "src": "66:21:3"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1770
+          ],
+          "name": "Autodealer",
+          "scope": 1771
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Roles",
+                  "referencedDeclaration": 2135,
+                  "type": "library Roles"
+                },
+                "id": 1683,
+                "name": "UserDefinedTypeName",
+                "src": "119:5:3"
+              },
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Roles.Role",
+                  "referencedDeclaration": 2048,
+                  "type": "struct Roles.Role"
+                },
+                "id": 1684,
+                "name": "UserDefinedTypeName",
+                "src": "129:10:3"
+              }
+            ],
+            "id": 1685,
+            "name": "UsingForDirective",
+            "src": "113:27:3"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "AutodealerAdded"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_account",
+                      "scope": 1689,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1686,
+                        "name": "ElementaryTypeName",
+                        "src": "166:7:3"
+                      }
+                    ],
+                    "id": 1687,
+                    "name": "VariableDeclaration",
+                    "src": "166:24:3"
+                  }
+                ],
+                "id": 1688,
+                "name": "ParameterList",
+                "src": "165:26:3"
+              }
+            ],
+            "id": 1689,
+            "name": "EventDefinition",
+            "src": "144:48:3"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "AutodealerRemoved"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_account",
+                      "scope": 1693,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1690,
+                        "name": "ElementaryTypeName",
+                        "src": "219:7:3"
+                      }
+                    ],
+                    "id": 1691,
+                    "name": "VariableDeclaration",
+                    "src": "219:24:3"
+                  }
+                ],
+                "id": 1692,
+                "name": "ParameterList",
+                "src": "218:26:3"
+              }
+            ],
+            "id": 1693,
+            "name": "EventDefinition",
+            "src": "195:50:3"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "autodealersList",
+              "scope": 1770,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct Roles.Role",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Roles.Role",
+                  "referencedDeclaration": 2048,
+                  "type": "struct Roles.Role"
+                },
+                "id": 1694,
+                "name": "UserDefinedTypeName",
+                "src": "249:10:3"
+              }
+            ],
+            "id": 1695,
+            "name": "VariableDeclaration",
+            "src": "249:34:3"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 1770,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1696,
+                "name": "ParameterList",
+                "src": "299:2:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1697,
+                "name": "ParameterList",
+                "src": "309:0:3"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "addRole",
+                              "referencedDeclaration": 2103,
+                              "type": "function (struct Roles.Role storage pointer,address)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1695,
+                                  "type": "struct Roles.Role storage ref",
+                                  "value": "autodealersList"
+                                },
+                                "id": 1698,
+                                "name": "Identifier",
+                                "src": "315:15:3"
+                              }
+                            ],
+                            "id": 1700,
+                            "name": "MemberAccess",
+                            "src": "315:23:3"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2150,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 1701,
+                                "name": "Identifier",
+                                "src": "339:3:3"
+                              }
+                            ],
+                            "id": 1702,
+                            "name": "MemberAccess",
+                            "src": "339:10:3"
+                          }
+                        ],
+                        "id": 1703,
+                        "name": "FunctionCall",
+                        "src": "315:35:3"
+                      }
+                    ],
+                    "id": 1704,
+                    "name": "ExpressionStatement",
+                    "src": "315:35:3"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1689,
+                              "type": "function (address)",
+                              "value": "AutodealerAdded"
+                            },
+                            "id": 1705,
+                            "name": "Identifier",
+                            "src": "361:15:3"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2150,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 1706,
+                                "name": "Identifier",
+                                "src": "377:3:3"
+                              }
+                            ],
+                            "id": 1707,
+                            "name": "MemberAccess",
+                            "src": "377:10:3"
+                          }
+                        ],
+                        "id": 1708,
+                        "name": "FunctionCall",
+                        "src": "361:27:3"
+                      }
+                    ],
+                    "id": 1709,
+                    "name": "EmitStatement",
+                    "src": "356:32:3"
+                  }
+                ],
+                "id": 1710,
+                "name": "Block",
+                "src": "309:84:3"
+              }
+            ],
+            "id": 1711,
+            "name": "FunctionDefinition",
+            "src": "288:105:3"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev Modifiers for Autodealer.",
+              "name": "onlyAutodealer",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1712,
+                "name": "ParameterList",
+                "src": "456:2:3"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                2153,
+                                2154
+                              ],
+                              "referencedDeclaration": 2153,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 1713,
+                            "name": "Identifier",
+                            "src": "465:7:3"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "bool",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_address_payable",
+                                      "typeString": "address payable"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1735,
+                                  "type": "function (address) view returns (bool)",
+                                  "value": "isAutodealer"
+                                },
+                                "id": 1714,
+                                "name": "Identifier",
+                                "src": "473:12:3"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2150,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 1715,
+                                    "name": "Identifier",
+                                    "src": "486:3:3"
+                                  }
+                                ],
+                                "id": 1716,
+                                "name": "MemberAccess",
+                                "src": "486:10:3"
+                              }
+                            ],
+                            "id": 1717,
+                            "name": "FunctionCall",
+                            "src": "473:24:3"
+                          }
+                        ],
+                        "id": 1718,
+                        "name": "FunctionCall",
+                        "src": "465:33:3"
+                      }
+                    ],
+                    "id": 1719,
+                    "name": "ExpressionStatement",
+                    "src": "465:33:3"
+                  },
+                  {
+                    "id": 1720,
+                    "name": "PlaceholderStatement",
+                    "src": "504:1:3"
+                  }
+                ],
+                "id": 1721,
+                "name": "Block",
+                "src": "459:51:3"
+              }
+            ],
+            "id": 1722,
+            "name": "ModifierDefinition",
+            "src": "433:77:3"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev Autodealer Utility functions.",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "isAutodealer",
+              "scope": 1770,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_account",
+                      "scope": 1735,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1723,
+                        "name": "ElementaryTypeName",
+                        "src": "612:7:3"
+                      }
+                    ],
+                    "id": 1724,
+                    "name": "VariableDeclaration",
+                    "src": "612:16:3"
+                  }
+                ],
+                "id": 1725,
+                "name": "ParameterList",
+                "src": "611:18:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 1735,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 1726,
+                        "name": "ElementaryTypeName",
+                        "src": "651:4:3"
+                      }
+                    ],
+                    "id": 1727,
+                    "name": "VariableDeclaration",
+                    "src": "651:4:3"
+                  }
+                ],
+                "id": 1728,
+                "name": "ParameterList",
+                "src": "650:6:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1728
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bool",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "hasRole",
+                              "referencedDeclaration": 2071,
+                              "type": "function (struct Roles.Role storage pointer,address) view returns (bool)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1695,
+                                  "type": "struct Roles.Role storage ref",
+                                  "value": "autodealersList"
+                                },
+                                "id": 1729,
+                                "name": "Identifier",
+                                "src": "670:15:3"
+                              }
+                            ],
+                            "id": 1730,
+                            "name": "MemberAccess",
+                            "src": "670:23:3"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1724,
+                              "type": "address",
+                              "value": "_account"
+                            },
+                            "id": 1731,
+                            "name": "Identifier",
+                            "src": "694:8:3"
+                          }
+                        ],
+                        "id": 1732,
+                        "name": "FunctionCall",
+                        "src": "670:33:3"
+                      }
+                    ],
+                    "id": 1733,
+                    "name": "Return",
+                    "src": "663:40:3"
+                  }
+                ],
+                "id": 1734,
+                "name": "Block",
+                "src": "657:51:3"
+              }
+            ],
+            "id": 1735,
+            "name": "FunctionDefinition",
+            "src": "590:118:3"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "addAutodealer",
+              "scope": 1770,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_account",
+                      "scope": 1753,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1736,
+                        "name": "ElementaryTypeName",
+                        "src": "735:7:3"
+                      }
+                    ],
+                    "id": 1737,
+                    "name": "VariableDeclaration",
+                    "src": "735:16:3"
+                  }
+                ],
+                "id": 1738,
+                "name": "ParameterList",
+                "src": "734:18:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1741,
+                "name": "ParameterList",
+                "src": "775:0:3"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1722,
+                      "type": "modifier ()",
+                      "value": "onlyAutodealer"
+                    },
+                    "id": 1739,
+                    "name": "Identifier",
+                    "src": "760:14:3"
+                  }
+                ],
+                "id": 1740,
+                "name": "ModifierInvocation",
+                "src": "760:14:3"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "addRole",
+                              "referencedDeclaration": 2103,
+                              "type": "function (struct Roles.Role storage pointer,address)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1695,
+                                  "type": "struct Roles.Role storage ref",
+                                  "value": "autodealersList"
+                                },
+                                "id": 1742,
+                                "name": "Identifier",
+                                "src": "781:15:3"
+                              }
+                            ],
+                            "id": 1744,
+                            "name": "MemberAccess",
+                            "src": "781:23:3"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1737,
+                              "type": "address",
+                              "value": "_account"
+                            },
+                            "id": 1745,
+                            "name": "Identifier",
+                            "src": "805:8:3"
+                          }
+                        ],
+                        "id": 1746,
+                        "name": "FunctionCall",
+                        "src": "781:33:3"
+                      }
+                    ],
+                    "id": 1747,
+                    "name": "ExpressionStatement",
+                    "src": "781:33:3"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1689,
+                              "type": "function (address)",
+                              "value": "AutodealerAdded"
+                            },
+                            "id": 1748,
+                            "name": "Identifier",
+                            "src": "825:15:3"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1737,
+                              "type": "address",
+                              "value": "_account"
+                            },
+                            "id": 1749,
+                            "name": "Identifier",
+                            "src": "841:8:3"
+                          }
+                        ],
+                        "id": 1750,
+                        "name": "FunctionCall",
+                        "src": "825:25:3"
+                      }
+                    ],
+                    "id": 1751,
+                    "name": "EmitStatement",
+                    "src": "820:30:3"
+                  }
+                ],
+                "id": 1752,
+                "name": "Block",
+                "src": "775:80:3"
+              }
+            ],
+            "id": 1753,
+            "name": "FunctionDefinition",
+            "src": "712:143:3"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "removeAutodealer",
+              "scope": 1770,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1754,
+                "name": "ParameterList",
+                "src": "884:2:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1755,
+                "name": "ParameterList",
+                "src": "894:0:3"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "removeRole",
+                              "referencedDeclaration": 2134,
+                              "type": "function (struct Roles.Role storage pointer,address)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1695,
+                                  "type": "struct Roles.Role storage ref",
+                                  "value": "autodealersList"
+                                },
+                                "id": 1756,
+                                "name": "Identifier",
+                                "src": "900:15:3"
+                              }
+                            ],
+                            "id": 1758,
+                            "name": "MemberAccess",
+                            "src": "900:26:3"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2150,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 1759,
+                                "name": "Identifier",
+                                "src": "927:3:3"
+                              }
+                            ],
+                            "id": 1760,
+                            "name": "MemberAccess",
+                            "src": "927:10:3"
+                          }
+                        ],
+                        "id": 1761,
+                        "name": "FunctionCall",
+                        "src": "900:38:3"
+                      }
+                    ],
+                    "id": 1762,
+                    "name": "ExpressionStatement",
+                    "src": "900:38:3"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1693,
+                              "type": "function (address)",
+                              "value": "AutodealerRemoved"
+                            },
+                            "id": 1763,
+                            "name": "Identifier",
+                            "src": "949:17:3"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2150,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 1764,
+                                "name": "Identifier",
+                                "src": "967:3:3"
+                              }
+                            ],
+                            "id": 1765,
+                            "name": "MemberAccess",
+                            "src": "967:10:3"
+                          }
+                        ],
+                        "id": 1766,
+                        "name": "FunctionCall",
+                        "src": "949:29:3"
+                      }
+                    ],
+                    "id": 1767,
+                    "name": "EmitStatement",
+                    "src": "944:34:3"
+                  }
+                ],
+                "id": 1768,
+                "name": "Block",
+                "src": "894:89:3"
+              }
+            ],
+            "id": 1769,
+            "name": "FunctionDefinition",
+            "src": "859:124:3"
+          }
+        ],
+        "id": 1770,
+        "name": "ContractDefinition",
+        "src": "89:933:3"
+      }
+    ],
+    "id": 1771,
+    "name": "SourceUnit",
+    "src": "32:991:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x7dd964aA73E87A23A9bD603e4d169e6C9b0120Bc",
+      "transactionHash": "0x2df580b98faf9b6653223bef83d0d01e3fcd0ac6a8d3c963a36d9b2dc6c688d5"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2023-11-27T13:07:31.289Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {
+      "isAutodealer(address)": {
+        "details": "Autodealer Utility functions."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

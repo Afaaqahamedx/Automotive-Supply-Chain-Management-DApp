@@ -1,0 +1,2409 @@
+{
+  "contractName": "logisticsCompany",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "logisticsCompanyAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "logisticsCompanyRemoved",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "islogisticsCompany",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "addlogisticsCompany",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "removelogisticsCompany",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"logisticsCompanyAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"logisticsCompanyRemoved\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"addlogisticsCompany\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"islogisticsCompany\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"removelogisticsCompany\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"islogisticsCompany(address)\":{\"details\":\"logisticsCompany Utility functions.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/rolesUtils[deprecated]/LogisticsCompany.sol\":\"logisticsCompany\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/rolesUtils[deprecated]/LogisticsCompany.sol\":{\"keccak256\":\"0x3066b1a877f4fe02fc786b4a400935af7e7d8966e31a89797b4294f10d93d753\",\"urls\":[\"bzz-raw://03ba1c81852d72a1cf94d65c50475cba8b81b2817e8162bb9f100538a000d913\",\"dweb:/ipfs/QmZAzfoxCGLAi7J4APbTC42n3SNT43fLEKypWXYADV8Tiy\"]},\"project:/contracts/rolesUtils[deprecated]/Roles.sol\":{\"keccak256\":\"0x0a7e1412487cf8072c2157904cc7820f14728dcb597c38756bab4a68dfa582a7\",\"urls\":[\"bzz-raw://3529dc207c096b92ca59f0517598b05386d0bfaea8b5ea0184a9f6f5c5a0cd06\",\"dweb:/ipfs/QmaatBa3Fwoy2eRpaszgoqfiBvnhLw4Hr3BeugHJHUUyZD\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061002933600061005960201b6101951790919060201c565b60405133907f9b2a9d5a4b9252fd8885a94e64b4972446c36d681670b33428286eac16cbcf1790600090a26100e3565b6001600160a01b03811661006c57600080fd5b61007f82826001600160e01b036100ae16565b1561008957600080fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b60006001600160a01b0382166100c357600080fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b61025e806100f26000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806303b5c0b3146100465780634a1ee11414610080578063be68e124146100a8575b600080fd5b61006c6004803603602081101561005c57600080fd5b50356001600160a01b03166100b0565b604080519115158252519081900360200190f35b6100a66004803603602081101561009657600080fd5b50356001600160a01b03166100c8565b005b6100a6610122565b60006100c2818363ffffffff61016016565b92915050565b6100d1336100b0565b6100da57600080fd5b6100eb60008263ffffffff61019516565b6040516001600160a01b038216907f9b2a9d5a4b9252fd8885a94e64b4972446c36d681670b33428286eac16cbcf1790600090a250565b61013360003363ffffffff6101e116565b60405133907f0f5950687962f62ff7ec530a8256278ab3de74ba87ef2d91ee4d984219c923b690600090a2565b60006001600160a01b03821661017557600080fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b6001600160a01b0381166101a857600080fd5b6101b28282610160565b156101bc57600080fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b6001600160a01b0381166101f457600080fd5b6101fe8282610160565b61020757600080fd5b6001600160a01b0316600090815260209190915260409020805460ff1916905556fea265627a7a72315820b67ade6819ae7557ad831389fa31a6f2c308ac0bd53a74018e17b8210ad1997a64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806303b5c0b3146100465780634a1ee11414610080578063be68e124146100a8575b600080fd5b61006c6004803603602081101561005c57600080fd5b50356001600160a01b03166100b0565b604080519115158252519081900360200190f35b6100a66004803603602081101561009657600080fd5b50356001600160a01b03166100c8565b005b6100a6610122565b60006100c2818363ffffffff61016016565b92915050565b6100d1336100b0565b6100da57600080fd5b6100eb60008263ffffffff61019516565b6040516001600160a01b038216907f9b2a9d5a4b9252fd8885a94e64b4972446c36d681670b33428286eac16cbcf1790600090a250565b61013360003363ffffffff6101e116565b60405133907f0f5950687962f62ff7ec530a8256278ab3de74ba87ef2d91ee4d984219c923b690600090a2565b60006001600160a01b03821661017557600080fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b6001600160a01b0381166101a857600080fd5b6101b28282610160565b156101bc57600080fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b6001600160a01b0381166101f457600080fd5b6101fe8282610160565b61020757600080fd5b6001600160a01b0316600090815260209190915260409020805460ff1916905556fea265627a7a72315820b67ade6819ae7557ad831389fa31a6f2c308ac0bd53a74018e17b8210ad1997a64736f6c63430005100032",
+  "sourceMap": "89:1047:5:-;;;312:117;8:9:-1;5:2;;;30:1;27;20:12;5:2;312:117:5;339:41;369:10;339:21;:29;;;;;;:41;;;;:::i;:::-;391:33;;413:10;;391:33;;;;;89:1047;;679:185:7;-1:-1:-1;;;;;764:22:7;;756:31;;;;;;802:23;810:4;816:8;-1:-1:-1;;;;;802:7:7;:23;:::i;:::-;801:24;793:33;;;;;;-1:-1:-1;;;;;833:19:7;:9;:19;;;;;;;;;;;:26;;-1:-1:-1;;833:26:7;855:4;833:26;;;679:185::o;449:171::-;538:4;-1:-1:-1;;;;;560:22:7;;552:31;;;;;;-1:-1:-1;;;;;;596:19:7;:9;:19;;;;;;;;;;;;;;;449:171::o;89:1047:5:-;;;;;;;",
+  "deployedSourceMap": "89:1047:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;89:1047:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;650:130;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;650:130:5;-1:-1:-1;;;;;650:130:5;;:::i;:::-;;;;;;;;;;;;;;;;;;784:167;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;784:167:5;-1:-1:-1;;;;;784:167:5;;:::i;:::-;;955:142;;;:::i;650:130::-;717:4;736:39;717:4;766:8;736:39;:29;:39;:::i;:::-;729:46;650:130;-1:-1:-1;;650:130:5:o;784:167::-;521:30;540:10;521:18;:30::i;:::-;513:39;;;;;;865;:21;895:8;865:39;:29;:39;:::i;:::-;915:31;;-1:-1:-1;;;;;915:31:5;;;;;;;;784:167;:::o;955:142::-;1002:44;:21;1035:10;1002:44;:32;:44;:::i;:::-;1057:35;;1081:10;;1057:35;;;;;955:142::o;449:171:7:-;538:4;-1:-1:-1;;;;;560:22:7;;552:31;;;;;;-1:-1:-1;;;;;;596:19:7;:9;:19;;;;;;;;;;;;;;;449:171::o;679:185::-;-1:-1:-1;;;;;764:22:7;;756:31;;;;;;802:23;810:4;816:8;802:7;:23::i;:::-;801:24;793:33;;;;;;-1:-1:-1;;;;;833:19:7;:9;:19;;;;;;;;;;;:26;;-1:-1:-1;;833:26:7;855:4;833:26;;;679:185::o;928:188::-;-1:-1:-1;;;;;1016:22:7;;1008:31;;;;;;1053:23;1061:4;1067:8;1053:7;:23::i;:::-;1045:32;;;;;;-1:-1:-1;;;;;1084:19:7;1106:5;1084:19;;;;;;;;;;;:27;;-1:-1:-1;;1084:27:7;;;928:188::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <0.9.0;\n\nimport \"./Roles.sol\";\n\ncontract logisticsCompany {\n  using Roles for Roles.Role;\n\n  event logisticsCompanyAdded(address indexed _account);\n  event logisticsCompanyRemoved(address indexed _account);\n\n  Roles.Role private logisticsCompanysList;\n\n  constructor() public {\n    logisticsCompanysList.addRole(msg.sender);\n    emit logisticsCompanyAdded(msg.sender);\n  }\n\n  ///@dev Modifiers for logisticsCompany.\n  modifier onlylogisticsCompany() {\n    require(islogisticsCompany(msg.sender));\n    _;\n  }\n  /*-----------------------------*/\n\n  ///@dev logisticsCompany Utility functions.\n  function islogisticsCompany(address _account) public view returns (bool) {\n    return logisticsCompanysList.hasRole(_account);\n  }\n\n  function addlogisticsCompany(address _account) public onlylogisticsCompany {\n    logisticsCompanysList.addRole(_account);\n    emit logisticsCompanyAdded(_account);\n  }\n\n  function removelogisticsCompany() public {\n    logisticsCompanysList.removeRole(msg.sender);\n    emit logisticsCompanyRemoved(msg.sender);\n  }\n  /*-----------------------------*/\n\n}\n",
+  "sourcePath": "C:\\Users\\LEGION\\Desktop\\Desktop\\Final\\contracts\\rolesUtils[deprecated]\\LogisticsCompany.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/rolesUtils[deprecated]/LogisticsCompany.sol",
+    "exportedSymbols": {
+      "logisticsCompany": [
+        1952
+      ]
+    },
+    "id": 1953,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1863,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:5"
+      },
+      {
+        "absolutePath": "project:/contracts/rolesUtils[deprecated]/Roles.sol",
+        "file": "./Roles.sol",
+        "id": 1864,
+        "nodeType": "ImportDirective",
+        "scope": 1953,
+        "sourceUnit": 2136,
+        "src": "66:21:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1952,
+        "linearizedBaseContracts": [
+          1952
+        ],
+        "name": "logisticsCompany",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 1867,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1865,
+              "name": "Roles",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2135,
+              "src": "125:5:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Roles_$2135",
+                "typeString": "library Roles"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "119:27:5",
+            "typeName": {
+              "contractScope": null,
+              "id": 1866,
+              "name": "Roles.Role",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2048,
+              "src": "135:10:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Role_$2048_storage_ptr",
+                "typeString": "struct Roles.Role"
+              }
+            }
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1871,
+            "name": "logisticsCompanyAdded",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1870,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1869,
+                  "indexed": true,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1871,
+                  "src": "178:24:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1868,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "178:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "177:26:5"
+            },
+            "src": "150:54:5"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1875,
+            "name": "logisticsCompanyRemoved",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1874,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1873,
+                  "indexed": true,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1875,
+                  "src": "237:24:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1872,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "237:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "236:26:5"
+            },
+            "src": "207:56:5"
+          },
+          {
+            "constant": false,
+            "id": 1877,
+            "name": "logisticsCompanysList",
+            "nodeType": "VariableDeclaration",
+            "scope": 1952,
+            "src": "267:40:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Role_$2048_storage",
+              "typeString": "struct Roles.Role"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1876,
+              "name": "Roles.Role",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2048,
+              "src": "267:10:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Role_$2048_storage_ptr",
+                "typeString": "struct Roles.Role"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 1892,
+              "nodeType": "Block",
+              "src": "333:96:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1883,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2150,
+                          "src": "369:3:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 1884,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "369:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1880,
+                        "name": "logisticsCompanysList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1877,
+                        "src": "339:21:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$2048_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 1882,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "addRole",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2103,
+                      "src": "339:29:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2048_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2048_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address)"
+                      }
+                    },
+                    "id": 1885,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "339:41:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1886,
+                  "nodeType": "ExpressionStatement",
+                  "src": "339:41:5"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1888,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2150,
+                          "src": "413:3:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 1889,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "413:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 1887,
+                      "name": "logisticsCompanyAdded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1871,
+                      "src": "391:21:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 1890,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "391:33:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1891,
+                  "nodeType": "EmitStatement",
+                  "src": "386:38:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1893,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1878,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "323:2:5"
+            },
+            "returnParameters": {
+              "id": 1879,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "333:0:5"
+            },
+            "scope": 1952,
+            "src": "312:117:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1903,
+              "nodeType": "Block",
+              "src": "507:57:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 1897,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2150,
+                              "src": "540:3:5",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 1898,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "540:10:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          ],
+                          "id": 1896,
+                          "name": "islogisticsCompany",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1917,
+                          "src": "521:18:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view returns (bool)"
+                          }
+                        },
+                        "id": 1899,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "521:30:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 1895,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2153,
+                        2154
+                      ],
+                      "referencedDeclaration": 2153,
+                      "src": "513:7:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 1900,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "513:39:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1901,
+                  "nodeType": "ExpressionStatement",
+                  "src": "513:39:5"
+                },
+                {
+                  "id": 1902,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "558:1:5"
+                }
+              ]
+            },
+            "documentation": "@dev Modifiers for logisticsCompany.",
+            "id": 1904,
+            "name": "onlylogisticsCompany",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 1894,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "504:2:5"
+            },
+            "src": "475:89:5",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1916,
+              "nodeType": "Block",
+              "src": "723:57:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1913,
+                        "name": "_account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1906,
+                        "src": "766:8:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1911,
+                        "name": "logisticsCompanysList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1877,
+                        "src": "736:21:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$2048_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 1912,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "hasRole",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2071,
+                      "src": "736:29:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Role_$2048_storage_ptr_$_t_address_$returns$_t_bool_$bound_to$_t_struct$_Role_$2048_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address) view returns (bool)"
+                      }
+                    },
+                    "id": 1914,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "736:39:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1910,
+                  "id": 1915,
+                  "nodeType": "Return",
+                  "src": "729:46:5"
+                }
+              ]
+            },
+            "documentation": "@dev logisticsCompany Utility functions.",
+            "id": 1917,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "islogisticsCompany",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1907,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1906,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1917,
+                  "src": "678:16:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1905,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "678:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "677:18:5"
+            },
+            "returnParameters": {
+              "id": 1910,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1909,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1917,
+                  "src": "717:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1908,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "717:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "716:6:5"
+            },
+            "scope": 1952,
+            "src": "650:130:5",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1934,
+              "nodeType": "Block",
+              "src": "859:92:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1927,
+                        "name": "_account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1919,
+                        "src": "895:8:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1924,
+                        "name": "logisticsCompanysList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1877,
+                        "src": "865:21:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$2048_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 1926,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "addRole",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2103,
+                      "src": "865:29:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2048_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2048_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address)"
+                      }
+                    },
+                    "id": 1928,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "865:39:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1929,
+                  "nodeType": "ExpressionStatement",
+                  "src": "865:39:5"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1931,
+                        "name": "_account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1919,
+                        "src": "937:8:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1930,
+                      "name": "logisticsCompanyAdded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1871,
+                      "src": "915:21:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 1932,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "915:31:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1933,
+                  "nodeType": "EmitStatement",
+                  "src": "910:36:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1935,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1922,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1921,
+                  "name": "onlylogisticsCompany",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1904,
+                  "src": "838:20:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "838:20:5"
+              }
+            ],
+            "name": "addlogisticsCompany",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1920,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1919,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1935,
+                  "src": "813:16:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1918,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "813:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "812:18:5"
+            },
+            "returnParameters": {
+              "id": 1923,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "859:0:5"
+            },
+            "scope": 1952,
+            "src": "784:167:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1950,
+              "nodeType": "Block",
+              "src": "996:101:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1941,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2150,
+                          "src": "1035:3:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 1942,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1035:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1938,
+                        "name": "logisticsCompanysList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1877,
+                        "src": "1002:21:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Role_$2048_storage",
+                          "typeString": "struct Roles.Role storage ref"
+                        }
+                      },
+                      "id": 1940,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "removeRole",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2134,
+                      "src": "1002:32:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Role_$2048_storage_ptr_$_t_address_$returns$__$bound_to$_t_struct$_Role_$2048_storage_ptr_$",
+                        "typeString": "function (struct Roles.Role storage pointer,address)"
+                      }
+                    },
+                    "id": 1943,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1002:44:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1944,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1002:44:5"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1946,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2150,
+                          "src": "1081:3:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 1947,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1081:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 1945,
+                      "name": "logisticsCompanyRemoved",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1875,
+                      "src": "1057:23:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 1948,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1057:35:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1949,
+                  "nodeType": "EmitStatement",
+                  "src": "1052:40:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1951,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removelogisticsCompany",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1936,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "986:2:5"
+            },
+            "returnParameters": {
+              "id": 1937,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "996:0:5"
+            },
+            "scope": 1952,
+            "src": "955:142:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1953,
+        "src": "89:1047:5"
+      }
+    ],
+    "src": "32:1105:5"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/rolesUtils[deprecated]/LogisticsCompany.sol",
+      "exportedSymbols": {
+        "logisticsCompany": [
+          1952
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".21",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 1863,
+        "name": "PragmaDirective",
+        "src": "32:32:5"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 2136,
+          "absolutePath": "project:/contracts/rolesUtils[deprecated]/Roles.sol",
+          "file": "./Roles.sol",
+          "scope": 1953,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1864,
+        "name": "ImportDirective",
+        "src": "66:21:5"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1952
+          ],
+          "name": "logisticsCompany",
+          "scope": 1953
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Roles",
+                  "referencedDeclaration": 2135,
+                  "type": "library Roles"
+                },
+                "id": 1865,
+                "name": "UserDefinedTypeName",
+                "src": "125:5:5"
+              },
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Roles.Role",
+                  "referencedDeclaration": 2048,
+                  "type": "struct Roles.Role"
+                },
+                "id": 1866,
+                "name": "UserDefinedTypeName",
+                "src": "135:10:5"
+              }
+            ],
+            "id": 1867,
+            "name": "UsingForDirective",
+            "src": "119:27:5"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "logisticsCompanyAdded"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_account",
+                      "scope": 1871,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1868,
+                        "name": "ElementaryTypeName",
+                        "src": "178:7:5"
+                      }
+                    ],
+                    "id": 1869,
+                    "name": "VariableDeclaration",
+                    "src": "178:24:5"
+                  }
+                ],
+                "id": 1870,
+                "name": "ParameterList",
+                "src": "177:26:5"
+              }
+            ],
+            "id": 1871,
+            "name": "EventDefinition",
+            "src": "150:54:5"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "logisticsCompanyRemoved"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_account",
+                      "scope": 1875,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1872,
+                        "name": "ElementaryTypeName",
+                        "src": "237:7:5"
+                      }
+                    ],
+                    "id": 1873,
+                    "name": "VariableDeclaration",
+                    "src": "237:24:5"
+                  }
+                ],
+                "id": 1874,
+                "name": "ParameterList",
+                "src": "236:26:5"
+              }
+            ],
+            "id": 1875,
+            "name": "EventDefinition",
+            "src": "207:56:5"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "logisticsCompanysList",
+              "scope": 1952,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct Roles.Role",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Roles.Role",
+                  "referencedDeclaration": 2048,
+                  "type": "struct Roles.Role"
+                },
+                "id": 1876,
+                "name": "UserDefinedTypeName",
+                "src": "267:10:5"
+              }
+            ],
+            "id": 1877,
+            "name": "VariableDeclaration",
+            "src": "267:40:5"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 1952,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1878,
+                "name": "ParameterList",
+                "src": "323:2:5"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1879,
+                "name": "ParameterList",
+                "src": "333:0:5"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "addRole",
+                              "referencedDeclaration": 2103,
+                              "type": "function (struct Roles.Role storage pointer,address)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1877,
+                                  "type": "struct Roles.Role storage ref",
+                                  "value": "logisticsCompanysList"
+                                },
+                                "id": 1880,
+                                "name": "Identifier",
+                                "src": "339:21:5"
+                              }
+                            ],
+                            "id": 1882,
+                            "name": "MemberAccess",
+                            "src": "339:29:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2150,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 1883,
+                                "name": "Identifier",
+                                "src": "369:3:5"
+                              }
+                            ],
+                            "id": 1884,
+                            "name": "MemberAccess",
+                            "src": "369:10:5"
+                          }
+                        ],
+                        "id": 1885,
+                        "name": "FunctionCall",
+                        "src": "339:41:5"
+                      }
+                    ],
+                    "id": 1886,
+                    "name": "ExpressionStatement",
+                    "src": "339:41:5"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1871,
+                              "type": "function (address)",
+                              "value": "logisticsCompanyAdded"
+                            },
+                            "id": 1887,
+                            "name": "Identifier",
+                            "src": "391:21:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2150,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 1888,
+                                "name": "Identifier",
+                                "src": "413:3:5"
+                              }
+                            ],
+                            "id": 1889,
+                            "name": "MemberAccess",
+                            "src": "413:10:5"
+                          }
+                        ],
+                        "id": 1890,
+                        "name": "FunctionCall",
+                        "src": "391:33:5"
+                      }
+                    ],
+                    "id": 1891,
+                    "name": "EmitStatement",
+                    "src": "386:38:5"
+                  }
+                ],
+                "id": 1892,
+                "name": "Block",
+                "src": "333:96:5"
+              }
+            ],
+            "id": 1893,
+            "name": "FunctionDefinition",
+            "src": "312:117:5"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev Modifiers for logisticsCompany.",
+              "name": "onlylogisticsCompany",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1894,
+                "name": "ParameterList",
+                "src": "504:2:5"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                2153,
+                                2154
+                              ],
+                              "referencedDeclaration": 2153,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 1895,
+                            "name": "Identifier",
+                            "src": "513:7:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "bool",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_address_payable",
+                                      "typeString": "address payable"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1917,
+                                  "type": "function (address) view returns (bool)",
+                                  "value": "islogisticsCompany"
+                                },
+                                "id": 1896,
+                                "name": "Identifier",
+                                "src": "521:18:5"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2150,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 1897,
+                                    "name": "Identifier",
+                                    "src": "540:3:5"
+                                  }
+                                ],
+                                "id": 1898,
+                                "name": "MemberAccess",
+                                "src": "540:10:5"
+                              }
+                            ],
+                            "id": 1899,
+                            "name": "FunctionCall",
+                            "src": "521:30:5"
+                          }
+                        ],
+                        "id": 1900,
+                        "name": "FunctionCall",
+                        "src": "513:39:5"
+                      }
+                    ],
+                    "id": 1901,
+                    "name": "ExpressionStatement",
+                    "src": "513:39:5"
+                  },
+                  {
+                    "id": 1902,
+                    "name": "PlaceholderStatement",
+                    "src": "558:1:5"
+                  }
+                ],
+                "id": 1903,
+                "name": "Block",
+                "src": "507:57:5"
+              }
+            ],
+            "id": 1904,
+            "name": "ModifierDefinition",
+            "src": "475:89:5"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev logisticsCompany Utility functions.",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "islogisticsCompany",
+              "scope": 1952,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_account",
+                      "scope": 1917,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1905,
+                        "name": "ElementaryTypeName",
+                        "src": "678:7:5"
+                      }
+                    ],
+                    "id": 1906,
+                    "name": "VariableDeclaration",
+                    "src": "678:16:5"
+                  }
+                ],
+                "id": 1907,
+                "name": "ParameterList",
+                "src": "677:18:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 1917,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 1908,
+                        "name": "ElementaryTypeName",
+                        "src": "717:4:5"
+                      }
+                    ],
+                    "id": 1909,
+                    "name": "VariableDeclaration",
+                    "src": "717:4:5"
+                  }
+                ],
+                "id": 1910,
+                "name": "ParameterList",
+                "src": "716:6:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1910
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bool",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "hasRole",
+                              "referencedDeclaration": 2071,
+                              "type": "function (struct Roles.Role storage pointer,address) view returns (bool)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1877,
+                                  "type": "struct Roles.Role storage ref",
+                                  "value": "logisticsCompanysList"
+                                },
+                                "id": 1911,
+                                "name": "Identifier",
+                                "src": "736:21:5"
+                              }
+                            ],
+                            "id": 1912,
+                            "name": "MemberAccess",
+                            "src": "736:29:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1906,
+                              "type": "address",
+                              "value": "_account"
+                            },
+                            "id": 1913,
+                            "name": "Identifier",
+                            "src": "766:8:5"
+                          }
+                        ],
+                        "id": 1914,
+                        "name": "FunctionCall",
+                        "src": "736:39:5"
+                      }
+                    ],
+                    "id": 1915,
+                    "name": "Return",
+                    "src": "729:46:5"
+                  }
+                ],
+                "id": 1916,
+                "name": "Block",
+                "src": "723:57:5"
+              }
+            ],
+            "id": 1917,
+            "name": "FunctionDefinition",
+            "src": "650:130:5"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "addlogisticsCompany",
+              "scope": 1952,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_account",
+                      "scope": 1935,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1918,
+                        "name": "ElementaryTypeName",
+                        "src": "813:7:5"
+                      }
+                    ],
+                    "id": 1919,
+                    "name": "VariableDeclaration",
+                    "src": "813:16:5"
+                  }
+                ],
+                "id": 1920,
+                "name": "ParameterList",
+                "src": "812:18:5"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1923,
+                "name": "ParameterList",
+                "src": "859:0:5"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1904,
+                      "type": "modifier ()",
+                      "value": "onlylogisticsCompany"
+                    },
+                    "id": 1921,
+                    "name": "Identifier",
+                    "src": "838:20:5"
+                  }
+                ],
+                "id": 1922,
+                "name": "ModifierInvocation",
+                "src": "838:20:5"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "addRole",
+                              "referencedDeclaration": 2103,
+                              "type": "function (struct Roles.Role storage pointer,address)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1877,
+                                  "type": "struct Roles.Role storage ref",
+                                  "value": "logisticsCompanysList"
+                                },
+                                "id": 1924,
+                                "name": "Identifier",
+                                "src": "865:21:5"
+                              }
+                            ],
+                            "id": 1926,
+                            "name": "MemberAccess",
+                            "src": "865:29:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1919,
+                              "type": "address",
+                              "value": "_account"
+                            },
+                            "id": 1927,
+                            "name": "Identifier",
+                            "src": "895:8:5"
+                          }
+                        ],
+                        "id": 1928,
+                        "name": "FunctionCall",
+                        "src": "865:39:5"
+                      }
+                    ],
+                    "id": 1929,
+                    "name": "ExpressionStatement",
+                    "src": "865:39:5"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1871,
+                              "type": "function (address)",
+                              "value": "logisticsCompanyAdded"
+                            },
+                            "id": 1930,
+                            "name": "Identifier",
+                            "src": "915:21:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1919,
+                              "type": "address",
+                              "value": "_account"
+                            },
+                            "id": 1931,
+                            "name": "Identifier",
+                            "src": "937:8:5"
+                          }
+                        ],
+                        "id": 1932,
+                        "name": "FunctionCall",
+                        "src": "915:31:5"
+                      }
+                    ],
+                    "id": 1933,
+                    "name": "EmitStatement",
+                    "src": "910:36:5"
+                  }
+                ],
+                "id": 1934,
+                "name": "Block",
+                "src": "859:92:5"
+              }
+            ],
+            "id": 1935,
+            "name": "FunctionDefinition",
+            "src": "784:167:5"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "removelogisticsCompany",
+              "scope": 1952,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1936,
+                "name": "ParameterList",
+                "src": "986:2:5"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1937,
+                "name": "ParameterList",
+                "src": "996:0:5"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "removeRole",
+                              "referencedDeclaration": 2134,
+                              "type": "function (struct Roles.Role storage pointer,address)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1877,
+                                  "type": "struct Roles.Role storage ref",
+                                  "value": "logisticsCompanysList"
+                                },
+                                "id": 1938,
+                                "name": "Identifier",
+                                "src": "1002:21:5"
+                              }
+                            ],
+                            "id": 1940,
+                            "name": "MemberAccess",
+                            "src": "1002:32:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2150,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 1941,
+                                "name": "Identifier",
+                                "src": "1035:3:5"
+                              }
+                            ],
+                            "id": 1942,
+                            "name": "MemberAccess",
+                            "src": "1035:10:5"
+                          }
+                        ],
+                        "id": 1943,
+                        "name": "FunctionCall",
+                        "src": "1002:44:5"
+                      }
+                    ],
+                    "id": 1944,
+                    "name": "ExpressionStatement",
+                    "src": "1002:44:5"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1875,
+                              "type": "function (address)",
+                              "value": "logisticsCompanyRemoved"
+                            },
+                            "id": 1945,
+                            "name": "Identifier",
+                            "src": "1057:23:5"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2150,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 1946,
+                                "name": "Identifier",
+                                "src": "1081:3:5"
+                              }
+                            ],
+                            "id": 1947,
+                            "name": "MemberAccess",
+                            "src": "1081:10:5"
+                          }
+                        ],
+                        "id": 1948,
+                        "name": "FunctionCall",
+                        "src": "1057:35:5"
+                      }
+                    ],
+                    "id": 1949,
+                    "name": "EmitStatement",
+                    "src": "1052:40:5"
+                  }
+                ],
+                "id": 1950,
+                "name": "Block",
+                "src": "996:101:5"
+              }
+            ],
+            "id": 1951,
+            "name": "FunctionDefinition",
+            "src": "955:142:5"
+          }
+        ],
+        "id": 1952,
+        "name": "ContractDefinition",
+        "src": "89:1047:5"
+      }
+    ],
+    "id": 1953,
+    "name": "SourceUnit",
+    "src": "32:1105:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xe6F359a1E88bcA333eb36E271e40aaf73023a758",
+      "transactionHash": "0x5aba61d47c8b02d28e2d770248ba849fda2c4212465aca65c38df7b669fe5605"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2023-11-27T13:07:31.297Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {
+      "islogisticsCompany(address)": {
+        "details": "logisticsCompany Utility functions."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
